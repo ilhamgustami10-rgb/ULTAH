@@ -11,13 +11,11 @@
             "dest": "/public/build/$1" 
         },
         
-        
         { 
             "src": "/(.*\\.(?:css|js|jpe?g|png|gif|webp|svg|ico|mp4|webm|mp3|wav|ttf|woff2?|eot))$", 
             "dest": "/public/$1" 
         },
         
-      
         { 
             "src": "/(.*)", 
             "dest": "/api/index.php",
@@ -35,7 +33,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "https://ultahsahfanilam.vercel.app/birthday", 
+        "APP_URL": "https://ultahsahfanilam.vercel.app", 
         "APP_KEY": "base64:TGaVaXwhWgjn9akhE4SCSIjGG/cQqvICUQ+PgLA3Bs0=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
