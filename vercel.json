@@ -3,11 +3,25 @@
     "framework": null,
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.7.4" }
-        
     },
     "routes": [
-        { "src": "/build/(.*)", "dest": "/public/build/$1" },
-        { "src": "/(.*)", "dest": "/api/index.php" }
+        /* 1. Route untuk aset build (Vite/Mix) */
+        { 
+            "src": "/build/(.*)", 
+            "dest": "/public/build/$1" 
+        },
+        
+        /* 2. ROUTE BARU untuk ASET MEDIA/STATIS LAINNYA */
+        { 
+            "src": "/(.*\\.(?:css|js|jpe?g|png|gif|webp|svg|ico|mp4|webm|mp3|wav|ttf|woff2?|eot))$", 
+            "dest": "/public/$1" 
+        },
+        
+        /* 3. Route Fallback untuk PHP */
+        { 
+            "src": "/(.*)", 
+            "dest": "/api/index.php" 
+        }
     ],
     "public": true,
     "buildCommand": "vite build",
