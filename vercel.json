@@ -3,11 +3,10 @@
     "framework": null,
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.7.4" }
-        /* PERUBAHAN UTAMA: Diperbarui dari 0.6.0 menjadi 0.7.4 */
+        
     },
     "routes": [
         { "src": "/build/(.*)", "dest": "/public/build/$1" },
-        /* Catatan: Saya tambahkan $1 pada dest di sini karena biasanya diperlukan */
         { "src": "/(.*)", "dest": "/api/index.php" }
     ],
     "public": true,
